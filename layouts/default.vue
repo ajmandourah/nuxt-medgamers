@@ -4,13 +4,13 @@
     <nav>
       <ul>
         <li><nuxt-link to="/">Home</nuxt-link></li>
-        <li>How to</li>
+        <li><nuxt-link to='/howto'>How to</nuxt-link></li>
         <li><nuxt-link to='/about'>About</nuxt-link></li>
       </ul>
     </nav>
   </header>
   <div class="container">
-    <div class="row row-center">
+    <div class="row">
       <div class="column">
         <nuxt />
       </div>
@@ -56,10 +56,10 @@ export default {
 }
 </script>
 
-<style scoped>
-.row,
+<style>
+
 .container{
-  height: 100vh !important;
+margin-top: 30vh;
 }
 header{
   display: flex;
@@ -70,7 +70,7 @@ nav{
   position: absolute;
   justify-content: center;
   top: 0;
-  margin-top: 25rem;
+  margin-top: 20vh;
   width: 70%;
 }
 nav ul{

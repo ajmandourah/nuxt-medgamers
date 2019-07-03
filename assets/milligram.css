@@ -171,11 +171,12 @@ input[type="submit"].button-clear[disabled]:hover {
 
 code {
   background: #f4f5f6;
-  border-radius: 0.4rem;
+  border-radius: 0rem;
   font-size: 86%;
-  margin: 0 0.2rem;
+  margin: 0 0.3rem;
   padding: 0.2rem 0.5rem;
   white-space: nowrap;
+  border-left: #2760d1 2px solid;
 }
 
 pre {
