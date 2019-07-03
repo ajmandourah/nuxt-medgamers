@@ -91,5 +91,21 @@ nav a{
     text-decoration: none;
 
 }
+nav a::before{
+  content: '';
+  display: block;
+  position: relative;
+  bottom: -3rem;
+  left: -0.3rem;
+  width:0%;
+  height: 4px;
+  opacity: 0;
+  background-color: #2760d1c5;
+  transition: all cubic-bezier(1,-0.01, 0, 1.78) 0.4s;
+}
+nav a:hover::before{
+  width: 100%;
+  opacity: 1;
+}
 
 </style>
