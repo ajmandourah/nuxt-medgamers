@@ -1,7 +1,16 @@
 <template>
-<div class="all">
+<div>
+  <header>
+    <nav>
+      <ul>
+        <li><nuxt-link to="/">Home</nuxt-link></li>
+        <li>How to</li>
+        <li><nuxt-link to='/about'>About</nuxt-link></li>
+      </ul>
+    </nav>
+  </header>
   <div class="container">
-    <div class="row">
+    <div class="row row-center">
       <div class="column">
         <nuxt />
       </div>
@@ -47,10 +56,40 @@ export default {
 }
 </script>
 
-<style>
-.all{
+<style scoped>
+.row,
+.container{
+  height: 100vh !important;
+}
+header{
   display: flex;
   justify-content: center;
-  align-items: center;
 }
+nav{
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  top: 0;
+  margin-top: 25rem;
+  width: 70%;
+}
+nav ul{
+  margin: 0;
+  padding: 0;
+  margin: 0 auto;
+  z-index: 99;
+}
+nav li{
+  display: inline-block;
+  text-align: center;
+  margin-right: 15rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem; 
+}
+nav a{
+    color:rgb(96, 108, 118);
+    text-decoration: none;
+
+}
+
 </style>
