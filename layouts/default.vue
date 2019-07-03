@@ -11,10 +11,10 @@
   </header>
   <div class="container">
     <div class="row">
-      <div class="column">
+      <div class="column content">
         <nuxt />
       </div>
-      <div class="column">
+      <div class="column mumble">
         <table>
           <tbody>
             <tr>
@@ -27,6 +27,7 @@
       </div>
     </div>
   </div>
+  <p id='mobile-text'>You are viewing the site in a mobile phone hence the simplified, strightforword view. The access the full experience check out the desktop version.</p>
   </div>
 </template>
 
@@ -106,6 +107,30 @@ nav a::before{
 nav a:hover::before{
   width: 100%;
   opacity: 1;
+}
+#mobile-text{
+  display: none;
+}
+
+/* Mobile view */
+@media (max-width: 40.0rem){
+header{
+  display: none;
+}
+.container{
+margin-top: 15vh;
+}
+.mumble{
+  margin-top: 5vh;
+}
+#mobile-text{
+  display: block;
+  text-align: center;
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: 2rem;
+  color: rgba(128, 128, 128, 0.719);
+}
 }
 
 </style>

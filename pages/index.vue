@@ -11,7 +11,7 @@
 h1 {
   font-family: 'Montserrat';
   font-weight: 400;
-  text-align: center;
+  text-align: left;
 
 }
 h3 {
@@ -23,5 +23,10 @@ span{
   color: #2760d1c5;
   font-weight: 400;
   font-size: 2rem;
+}
+@media (max-width: 40.0rem){
+  h3{
+    display: none;
+  }
 }
 </style>
