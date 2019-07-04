@@ -27,7 +27,7 @@
       </div>
     </div>
   </div>
-  <p id='mobile-text'>You are viewing the site in a mobile phone hence the simplified, strightforword view. The access the full experience check out the desktop version.</p>
+  <p id='mobile-text'>You are viewing the site in a mobile phone hence the simplified, strightforword view. To get the full experience check out the desktop version.</p>
   </div>
 </template>
 
@@ -51,7 +51,26 @@ export default {
       load_mum() //This will to the loading the first time
       window.setInterval(() => {
         load_mum()
-      }, 30000) //This will load the viewer every 30 seconds
+      }, 10000) //This will load the viewer every 30 seconds
+
+      //notification
+      fetch('https://medapi.duckdns.org:3000/json', {
+			mode: 'cors',
+			headers: {'Content-Type': 'application/json'}
+		})
+		.then((resp) => resp.json())
+		.then(msg => {
+			msg = msg[0]
+			var date = new Date(msg.created_at).toLocaleString()
+			var notification = new Noty({
+			text: '<b>' + msg.title + '</b>' + ' ' + date  + '<br>' +  msg.body,
+			theme: 'nest',
+			layout: 'bottomRight'
+			});
+			setTimeout( () => {
+				notification.show()
+				}, 500)
+		})
     }
   }
 }
@@ -99,7 +118,7 @@ nav a::before{
   bottom: -3rem;
   left: -0.3rem;
   width:0%;
-  height: 4px;
+  height: 2px;
   opacity: 0;
   background-color: #2760d1c5;
   transition: all cubic-bezier(1,-0.01, 0, 1.78) 0.4s;

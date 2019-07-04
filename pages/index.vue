@@ -22,11 +22,15 @@ h3 {
 span{
   color: #2760d1c5;
   font-weight: 400;
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 @media (max-width: 40.0rem){
   h3{
     display: none;
   }
+  h1{
+    text-align: center;
+  }
+
 }
 </style>

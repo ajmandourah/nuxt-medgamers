@@ -18,6 +18,8 @@ export default {
       {src: '/jquery.js'},
       {src: '/mumble.js'},
       {src: '/qtip.js'},
+      {src: '/noty.js'},
+
 
     ]
   },
@@ -30,7 +32,8 @@ export default {
   */
   css: [
     '~assets/style.css',
-    '~assets/milligram.css'
+    '~assets/milligram.css',
+    '~assets/noty.css'
   ],
   /*
   ** Plugins to load before mounting the App
