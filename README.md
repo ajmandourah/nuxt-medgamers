@@ -1,6 +1,6 @@
 # new-medgamers
 
-> My impeccable Nuxt.js project
+> A rebiuld of the medgamers website using Nuxt JS
 
 ## Build Setup
 
