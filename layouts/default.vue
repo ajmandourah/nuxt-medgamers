@@ -77,7 +77,12 @@ export default {
 </script>
 
 <style>
-
+body{
+  background-color: rgb(26, 2, 36);
+}
+h1, h3, p{
+  color:white;
+}
 .container{
 margin-top: 30vh;
 }
@@ -107,9 +112,12 @@ nav li{
   letter-spacing: 0.5rem; 
 }
 nav a{
-    color:rgb(96, 108, 118);
+    color:rgb(255, 255, 255);
     text-decoration: none;
 
+}
+nav a:hover{
+  color: white;
 }
 nav a::before{
   content: '';
@@ -120,7 +128,7 @@ nav a::before{
   width:0%;
   height: 2px;
   opacity: 0;
-  background-color: #2760d1c5;
+  background-color: #baa4f7c5;
   transition: all cubic-bezier(1,-0.01, 0, 1.78) 0.4s;
 }
 nav a:hover::before{
@@ -148,7 +156,7 @@ margin-top: 15vh;
   width: 80vw;
   margin: 0 auto;
   margin-top: 2rem;
-  color: rgba(128, 128, 128, 0.719);
+  color: rgba(255, 255, 255, 0.925);
 }
 }
 

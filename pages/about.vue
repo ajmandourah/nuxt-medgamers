@@ -29,7 +29,7 @@ h3 {
 
 }
 span{
-  color: #2760d1c5;
+  color: #e4c0fc;
   font-weight: 600;
 }
 
