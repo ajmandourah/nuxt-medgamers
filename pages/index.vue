@@ -20,7 +20,7 @@ h3 {
     text-align: left;
 }
 span{
-  color: #2760d1c5;
+  color: #e4c0fc;
   font-weight: 400;
   font-size: 1.5rem;
 }
