@@ -108,7 +108,7 @@ function mumbleReader(jsonurl, div) {
   var user = function(data) {
     var tip = "Name: "+data.name+"<br />Idle:" + parseTime(data.idlesecs) + "<br />Online:" + parseTime(data.onlinesecs) + "<br />OS:" +data.os;
     var imgf = (data.idlesecs == 0) ? img('talking_on.png', '') : img('talking_off.png', '');
-    var d = "<div class=\"mumstatusItem\"><div class=\"mumstatusLabel\"><a tooltip=\""+ tip +"\">" +imgf+ lengh(data.name) + "</div>";
+    var d = "<div class=\"mumstatusItem\"><div class=\"mumstatusUser\"><a tooltip=\""+ tip +"\">" +imgf+ lengh(data.name) + "</div>";
     d += "<div class=\"mumstatusFlags\">";
     d += userflags(data);
     d += "</div></a>";
@@ -210,7 +210,7 @@ function mumbleReader(jsonurl, div) {
     var src = (data.x_connecturl != null) ? data.x_connecturl : '';
     var name = "Medgamers";
     if(luseservername) name = data.name;
-    d += "<a href=\""+src+"\" tooltip=\""+ tip +"\">"+img('mumble.png', '')+" "+name+": </a><br />";
+    d += "<a href=\""+src+"\" tooltip=\""+ tip +"\">"+img('mumble.png', '')+" "+'Online users'+": </a><br />";
     if(data.root.channels != null) {
       d += channels(data.root.channels);
     }

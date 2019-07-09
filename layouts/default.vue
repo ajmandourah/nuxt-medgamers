@@ -51,7 +51,7 @@ export default {
       load_mum() //This will to the loading the first time
       window.setInterval(() => {
         load_mum()
-      }, 10000) //This will load the viewer every 30 seconds
+      }, 50000) //This will load the viewer every 30 seconds
 
       //notification
       fetch('https://medapi.duckdns.org:3000/json', {
@@ -78,7 +78,7 @@ export default {
 
 <style>
 body{
-  background-color: rgb(26, 2, 36);
+  background-color: rgb(6, 16, 46);
 }
 h1, h3, p{
   color:white;

@@ -170,14 +170,14 @@ input[type="submit"].button-clear[disabled]:hover {
 }
 
 code {
-  background: #55326d;
-  color: rgb(230, 194, 240);
+  background: rgba(14, 125, 199, 0.329);
+  color: rgb(194, 201, 240);
   border-radius: 0rem;
   font-size: 86%;
   margin: 0 0.3rem;
   padding: 0.2rem 0.5rem;
   white-space: nowrap;
-  border-left: #b40edd 2px solid;
+  border-left: #bbbaf8 2px solid;
 }
 
 pre {
@@ -500,10 +500,10 @@ a {
   text-decoration: none;
 }
 
-a:focus,
+/* a:focus,
 a:hover {
   color: #606c76;
-}
+} */
 
 dl,
 ol,

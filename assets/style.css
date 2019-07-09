@@ -81,15 +81,18 @@ mumble_server * a {
 }
 
 #mum0 {
-  width: 250px;
+  width: 300px;
   margin: auto;
   /* border: 1px solid rgb(218, 218, 218); */
-  border-radius: 20px;
+  border-radius: 5px;
   /* border-left: 3px solid #2760d19a; */
-  padding: 10px;
-  box-shadow: 5px 2px 30px 6px rgba(184, 113, 212, 0.527);
-  background-color: white;
-
+  padding: 40px;
+  box-shadow: 5px 2px 30px 6px rgba(8, 3, 73, 0.664);
+  /* background-color: white; */
+  background: linear-gradient(323deg, rgba(2,0,36,1) 0%, rgba(0,51,164,1) 0%, rgba(14,126,199,1) 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .mumstatus {
@@ -134,9 +137,30 @@ mumble_server * a {
   right: 0;
   clear: right;
 }
+.mumstatusLabel, .mumstatusUser{
+  padding: 3px 0;
+}
 .mumstatus a {
   text-decoration: none;
-  color: rgb(35, 8, 46);
+  color: rgb(176, 213, 238);
+  font-size: 3rem;
+  font-weight: 300;
+  font-family: "Montserrat";
+}
+/* channel text  */
+.mumstatusLabel a{
+  color: rgba(198, 198, 209, 0.5);
+  font-size: 1.9rem;
+  font-weight: 400;
+}
+/* User text */
+.mumstatusUser a{
+  color: rgb(233, 233, 241);
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+.mumstatusLabel a img{
+margin-right: 10px;
 }
 .mumstatus a:hover {
   text-decoration: none;
@@ -144,6 +168,7 @@ mumble_server * a {
 .mumstatus img {
   margin-right: 2px;
   border: 0;
+  display: none;
 }
 .page-enter-active, .page-leave-active {
   transition: opacity .5s;
