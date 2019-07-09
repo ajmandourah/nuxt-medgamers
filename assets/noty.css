@@ -387,8 +387,8 @@
 
 .noty_theme__nest.noty_type__alert,
 .noty_theme__nest.noty_type__notification {
-  background-color: #ffffff;
-  color: rgb(110, 110, 110);
+  background-color: #222e52;
+  color: rgb(209, 208, 224);
   border-left: 2px solid #2760d1;
 }
 .noty_theme__nest.noty_type__alert .noty_progressbar,

@@ -10,17 +10,17 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,600&display=swap');
 h1 {
   font-family: 'Montserrat';
-  font-weight: 400;
+  font-weight: 600;
   text-align: left;
 
 }
 h3 {
   font-family: 'Montserrat';
   font-weight: 300;
-    text-align: left;
+  text-align: left;
 }
 span{
-  color: #e4c0fc;
+  color: #c0c6fc;
   font-weight: 400;
   font-size: 1.5rem;
 }

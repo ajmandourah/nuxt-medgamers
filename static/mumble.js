@@ -106,7 +106,7 @@ function mumbleReader(jsonurl, div) {
    * @reten the user renderd
    */
   var user = function(data) {
-    var tip = "Name: "+data.name+"<br />Idle:" + parseTime(data.idlesecs) + "<br />Online:" + parseTime(data.onlinesecs) + "<br />OS:" +data.os;
+    var tip = "<b>Name:</b> "+data.name+"<br /><b>Idle:</b> " + parseTime(data.idlesecs) + "<br /><b>Online:</b> " + parseTime(data.onlinesecs) + "<br /><b>OS:</b> " +data.os;
     var imgf = (data.idlesecs == 0) ? img('talking_on.png', '') : img('talking_off.png', '');
     var d = "<div class=\"mumstatusItem\"><div class=\"mumstatusUser\"><a tooltip=\""+ tip +"\">" +imgf+ lengh(data.name) + "</div>";
     d += "<div class=\"mumstatusFlags\">";
@@ -144,7 +144,19 @@ function mumbleReader(jsonurl, div) {
   var activatehover = function() {
     $('#'+ldiv+' [tooltip]').each(function() // Select all elements with the \"tooltip\" attribute
     {
-      $(this).qtip({content: $(this).attr('tooltip')}); // Retrieve the tooltip attribute value from the current element
+      $(this).qtip({
+        content: $(this).attr('tooltip'),
+        style: {
+          background: '#C32B50',
+          color: 'white',
+          border: {
+            width: 0,
+            radius: 5,
+            color: '#C32B50'
+          }
+        }
+      
+      }); // Retrieve the tooltip attribute value from the current element
     });
   }
   

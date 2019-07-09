@@ -1,5 +1,6 @@
 <template>
 <div>
+  <img class="bg" src="/bg.svg" alt="">
   <header>
     <nav>
       <ul>
@@ -24,6 +25,7 @@
             </tr>
           </tbody>
         </table>
+        <div class="refresh" tooltip="Refresh the mumble interface" @click='refresh()'>Refresh</div>
       </div>
     </div>
   </div>
@@ -72,19 +74,35 @@ export default {
 				}, 500)
 		})
     }
+  },
+  methods: {
+    refresh: function() {
+      var mr = new mumbleReader(
+        'https://ajmandourah.duckdns.org:21804/1?callback=?',
+        'mum0'
+      )
+      mr.start()
+}
   }
 }
 </script>
 
 <style>
+.bg{ 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 90vw;
+}
 body{
-  background-color: rgb(6, 16, 46);
+  background-color: #06102e;
 }
 h1, h3, p{
   color:white;
 }
+
 .container{
-margin-top: 30vh;
+margin-top: 20vh;
 }
 header{
   display: flex;
@@ -95,7 +113,7 @@ nav{
   position: absolute;
   justify-content: center;
   top: 0;
-  margin-top: 20vh;
+  margin-top: 10vh;
   width: 70%;
 }
 nav ul{
@@ -128,15 +146,33 @@ nav a::before{
   width:0%;
   height: 2px;
   opacity: 0;
-  background-color: #baa4f7c5;
+  background-color: #eaeaff;
   transition: all cubic-bezier(1,-0.01, 0, 1.78) 0.4s;
 }
 nav a:hover::before{
   width: 100%;
   opacity: 1;
 }
+
 #mobile-text{
   display: none;
+}
+.refresh{
+  width: 200px;
+  height: 50px;
+  background-color: #222e52;
+      margin: auto;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.836);
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+      box-shadow: 5px 2px 30px 6px rgba(8, 3, 73, 0.664);
+      font-family: 'Montserrat';
+      cursor: pointer;
+
 }
 
 /* Mobile view */
@@ -145,7 +181,7 @@ header{
   display: none;
 }
 .container{
-margin-top: 15vh;
+margin-top: 10vh;
 }
 .mumble{
   margin-top: 5vh;
@@ -157,6 +193,9 @@ margin-top: 15vh;
   margin: 0 auto;
   margin-top: 2rem;
   color: rgba(255, 255, 255, 0.925);
+}
+.bg{ 
+  display: none;
 }
 }
 
