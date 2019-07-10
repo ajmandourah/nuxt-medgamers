@@ -1,8 +1,9 @@
 <template>
   <div>
+    <h1>How to</h1>
     <h3>How to connect</h3>
     <p>
-      Use this information to add log in to the server through mumble.
+      Use this information to log in to the server through mumble.
       <br />Address
       <code>medgamers.duckdns.org</code> and the port is
       <code>21801</code> .
@@ -47,6 +48,12 @@ export default {}
 </script>
 
 <style scoped>
+h1 {
+  font-family: 'Montserrat';
+  font-weight: 600;
+  text-align: left;
+
+}
 h3,
 p {
   font-family: 'Montserrat';
@@ -57,5 +64,6 @@ h3 {
 }
 p {
   font-weight: 400;
+  line-height: 2.7rem;
 }
 </style>

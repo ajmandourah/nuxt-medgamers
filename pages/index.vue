@@ -25,6 +25,8 @@ h3 {
 p{
   font-family: 'Montserrat';
   font-weight: 500;
+  line-height: 2.5em;
+  width: 80%;
 }
 span{
   color: #c0c6fc;

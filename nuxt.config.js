@@ -20,7 +20,6 @@ export default {
       {src: '/qtip.js'},
       {src: '/noty.js'},
 
-
     ]
   },
   /*

@@ -22,6 +22,12 @@ h1, p {
   text-align: left;
 
 }
+h1{
+  font-weight: 600;
+}
+p{
+  line-height: 3rem;
+}
 h3 {
   font-family: 'Montserrat';
   font-weight: 300;
